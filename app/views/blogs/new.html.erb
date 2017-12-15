@@ -1,0 +1,20 @@
+<section class="section">
+  <div class="container">
+    <h2>New Blog</h2>
+    <%= form_with scope: :blogs, url: blogs_path, local: true do |form| %>
+      <p>
+        <%= form.label :title %><br>
+        <%= form.text_field :title %>
+      </p>
+
+      <p>
+        <%= form.label :content %><br>
+        <%= form.text_area :content %>
+      </p>
+
+      <p>
+        <%= form.submit %>
+      </p>
+    <% end %>
+  </div>
+</section>
